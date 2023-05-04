@@ -12,10 +12,10 @@
         android:theme="@style/Theme.Bakery"
         tools:targetApi="31">
         <activity
-            android:name=".SucessfulActivity"
+            android:name=".CheckoutActivity2"
             android:exported="false" />
         <activity
-            android:name=".carddialogActivity"
+            android:name=".LoginActivity"
             android:exported="false" />
         <activity
             android:name=".DetailsActivity"
@@ -38,20 +38,20 @@
         <activity
             android:name=".HomeActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
+
         </activity>
         <activity
             android:name=".LogiinActivity"
             android:exported="true" />
         <activity
-            android:name=".LoginActivity"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
-            android:exported="true" />
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

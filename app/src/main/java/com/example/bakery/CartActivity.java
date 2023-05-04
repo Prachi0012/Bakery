@@ -6,9 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class CartActivity extends AppCompatActivity {
-    ImageButton cart,Order;
+    ImageButton home,Order;
+    TextView checkout;
+    CircleImageView back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,11 +23,11 @@ public class CartActivity extends AppCompatActivity {
     }
 
     private void initview() {
-        cart=findViewById(R.id.cart);
-        cart.setOnClickListener(new View.OnClickListener() {
+        home=findViewById(R.id.home);
+        home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(CartActivity.this , CartActivity.class);
+                Intent i = new Intent(CartActivity.this , HomeActivity.class);
                 startActivity(i);
             }
         });
@@ -31,6 +36,22 @@ public class CartActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(CartActivity.this , OrderActivity.class);
+                startActivity(i);
+            }
+        });
+        checkout=findViewById(R.id.checkout);
+        checkout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(CartActivity.this ,CheckoutActivity2.class);
+                startActivity(i);
+            }
+        });
+        back=findViewById(R.id.back);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(CartActivity.this ,HomeActivity.class);
                 startActivity(i);
             }
         });

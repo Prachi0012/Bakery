@@ -12,7 +12,7 @@ import android.view.View;
 import android.widget.TextView;
 
 public class LogiinActivity extends AppCompatActivity {
-    CardView loginbttn;
+    TextView email;
 
 
     @Override
@@ -23,11 +23,11 @@ public class LogiinActivity extends AppCompatActivity {
     }
 
     private void initview() {
-        loginbttn=findViewById(R.id.loginbttn);
-        loginbttn.setOnClickListener(new View.OnClickListener() {
+        email=findViewById(R.id.email);
+        email.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(LogiinActivity.this,HomeActivity.class);
+                Intent i = new Intent(LogiinActivity.this,LoginActivity.class);
                 startActivity(i);
             }
         });

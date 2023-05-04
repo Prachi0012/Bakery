@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".CheckoutActivity">
-
+    tools:context=".CheckoutActivity2">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -33,6 +32,7 @@
 
     </LinearLayout>
 
+    <!--        footer-->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -68,8 +68,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/_10sdp"
-                        android:text="10/01/2023"
-                        android:textColor="@color/black"
+                        android:text="DD/MM/YYYY"
+                        android:id="@+id/date"
                         android:textSize="@dimen/_16ssp" />
 
                     <ImageView
@@ -107,8 +107,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/_10sdp"
-                        android:text="05:00 AM"
-                        android:textColor="@color/black"
+                        android:text="HH:MM AM"
                         android:textSize="@dimen/_16ssp" />
 
                     <ImageView
@@ -146,7 +145,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/_10sdp"
-                        android:text="+91 000000000"
+                        android:text="+91"
                         android:textColor="@color/black"
                         android:textSize="@dimen/_16ssp" />
 
@@ -173,14 +172,15 @@
                     android:text="Payment Method"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_15ssp" />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="end"
                     android:layout_marginTop="@dimen/_10sdp"
-                    android:textSize="@dimen/_16ssp"
+                    android:gravity="end"
                     android:text="Change"
-                    android:textColor="#9E6F21" />
+                    android:textColor="#9E6F21"
+                    android:textSize="@dimen/_16ssp" />
             </LinearLayout>
 
             <androidx.cardview.widget.CardView
@@ -195,13 +195,6 @@
                     android:layout_gravity="center"
                     android:orientation="horizontal">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/_10sdp"
-                        android:text="**** **** ***** 2156"
-                        android:textColor="@color/black"
-                        android:textSize="@dimen/_16ssp" />
 
                     <ImageView
                         android:layout_width="match_parent"
@@ -216,11 +209,11 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
                 android:text="Have a gift code?"
                 android:textColor="#9E6F21"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:textSize="@dimen/_18ssp"
-                android:layout_marginHorizontal="@dimen/_10sdp"/>
+                android:textSize="@dimen/_18ssp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -233,17 +226,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Subtotal"
-                    android:textSize="@dimen/_15sdp"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="$2.97"
-                    android:textSize="@dimen/_15sdp"
                     android:gravity="end"
-                    android:textColor="@color/black"/>
+                    android:text="$2.97"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -255,17 +249,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Discounts"
-                    android:textSize="@dimen/_15sdp"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="$0.00"
-                    android:textSize="@dimen/_15sdp"
                     android:gravity="end"
-                    android:textColor="@color/black"/>
+                    android:text="$0.00"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -277,18 +272,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Total"
+                    android:textColor="@color/black"
                     android:textSize="@dimen/_20sdp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="$2.97"
-                    android:textSize="@dimen/_20sdp"
-                    android:textStyle="bold"
                     android:gravity="end"
-                    android:textColor="@color/black"/>
+                    android:text="$2.97"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_20sdp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
@@ -327,26 +322,27 @@
                 </LinearLayout>
 
             </LinearLayout>
+
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_40sdp"
-                app:cardBackgroundColor="#FFCB42"
                 android:layout_marginHorizontal="@dimen/_20sdp"
                 android:layout_marginTop="@dimen/_15sdp"
+                app:cardBackgroundColor="#FFCB42"
                 app:cardCornerRadius="@dimen/_20sdp">
+
                 <TextView
+                    android:id="@+id/completeord"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="Complete Order"
-                    android:id="@+id/completeord"
                     android:gravity="center"
-                    android:textSize="@dimen/_16ssp"
-                    android:textColor="@color/black" />
+                    android:text="Complete Order"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_16ssp" />
             </androidx.cardview.widget.CardView>
         </LinearLayout>
     </ScrollView>
 
-    <!--        footer-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -404,5 +400,6 @@
 
 
     </LinearLayout>
+
 
 </LinearLayout>

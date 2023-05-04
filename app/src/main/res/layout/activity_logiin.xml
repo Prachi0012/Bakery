@@ -76,12 +76,14 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+
                 android:layout_margin="@dimen/_10sdp">
 
-                <EditText
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_30sdp"
                     android:background="@null"
+                    android:id="@+id/email"
                     android:inputType="textEmailAddress"
                     android:maxLines="1" />
             </androidx.cardview.widget.CardView>
@@ -101,7 +103,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_10sdp">
 
-                <EditText
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_30sdp"
                     android:background="@null"
@@ -211,7 +213,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_30sdp"
                 android:layout_marginHorizontal="@dimen/_10sdp"
-                android:id="@+id/loginbttn"
                 android:layout_marginVertical="@dimen/_10sdp"
                 app:cardBackgroundColor="#FFCB42"
                 app:cardCornerRadius="@dimen/_20sdp">
