@@ -77,7 +77,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginRight="@dimen/_8sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
                             android:gravity="end"
                             android:text="$3.95"
                             android:textColor="@color/black"
@@ -133,6 +133,7 @@
                                 android:layout_gravity="center_vertical"
                                 android:gravity="end"
                                 android:text="$2.99"
+                                android:layout_marginRight="@dimen/_5sdp"
                                 android:textColor="@color/black"
                                 android:textSize="@dimen/_15ssp"
                                 android:textStyle="bold" />
@@ -169,6 +170,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 android:gravity="end"
+                                android:layout_marginRight="@dimen/_5sdp"
                                 android:text="$2.99"
                                 android:textColor="@color/black"
                                 android:textSize="@dimen/_15ssp"
@@ -230,7 +232,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginRight="@dimen/_8sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
                             android:gravity="end"
                             android:text="$6.96"
                             android:textColor="@color/black"
@@ -284,7 +286,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:layout_marginLeft="@dimen/_28sdp"
+                                android:layout_marginRight="@dimen/_5sdp"
                                 android:gravity="end"
                                 android:text="$5.97"
                                 android:textColor="@color/black"
@@ -319,10 +321,10 @@
                                 android:textColor="@color/black" />
 
                             <TextView
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:layout_marginLeft="@dimen/_15sdp"
+                                android:layout_marginRight="@dimen/_5sdp"
                                 android:gravity="end"
                                 android:text="$0.99"
                                 android:textColor="@color/black"
@@ -346,58 +348,116 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="bottom"
-        android:paddingVertical="@dimen/_4sdp"
         android:weightSum="4">
 
-
-        <ImageButton
+        <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="@dimen/_38sdp"
-            android:layout_marginLeft="5dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@null"
-            android:id="@+id/home"
-            android:contentDescription="TODO"
-            android:scaleType="fitCenter"
-            android:src="@drawable/home11"
-            tools:ignore="Suspicious0dp" />
+            android:gravity="center"
+            android:orientation="vertical">
 
-        <ImageButton
+            <ImageButton
+                android:id="@+id/home"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:contentDescription="TODO"
+                android:scaleType="fitCenter"
+                android:src="@drawable/home11"
+                tools:ignore="Suspicious0dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:text="Home"
+                android:textSize="@dimen/_12ssp" />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="@dimen/_38sdp"
-            android:layout_marginLeft="5dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:id="@+id/cart"
-            android:background="@null"
-            android:contentDescription="TODO"
-            android:scaleType="fitCenter"
-            android:src="@drawable/cart"
-            tools:ignore="Suspicious0dp" />
+            android:gravity="center"
+            android:orientation="vertical">
 
-        <ImageButton
+            <ImageButton
+                android:id="@+id/cart"
+                android:layout_width="@dimen/_23sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:contentDescription="TODO"
+                android:scaleType="fitCenter"
+                android:src="@drawable/cart"
+                tools:ignore="Suspicious0dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:text="Cart"
+                android:textSize="@dimen/_12ssp" />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="@dimen/_38sdp"
-            android:layout_marginLeft="5dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@null"
-            android:contentDescription="TODO"
-            android:scaleType="fitCenter"
-            android:src="@drawable/order11"
-            tools:ignore="Suspicious0dp" />
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageButton
+                android:id="@+id/Order"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:contentDescription="TODO"
+                android:scaleType="fitCenter"
+                android:src="@drawable/order11"
+                tools:ignore="Suspicious0dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:textColor="#FFCB42"
+                android:text="Order"
+                android:textSize="@dimen/_12ssp" />
+        </LinearLayout>
 
 
-        <ImageButton
+
+        <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="@dimen/_38sdp"
-            android:layout_marginLeft="5dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@null"
-            android:contentDescription="profile"
-            android:scaleType="fitCenter"
-            android:src="@drawable/notify" />
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:layout_width="@dimen/_23sdp"
+                android:layout_height="@dimen/_23sdp"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:contentDescription="profile"
+                android:scaleType="fitCenter"
+                android:src="@drawable/notify" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Notification"
+                android:textSize="@dimen/_12ssp" />
+        </LinearLayout>
+
 
 
     </LinearLayout>
+
 
 
 
